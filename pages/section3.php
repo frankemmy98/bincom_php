@@ -17,7 +17,7 @@ if (isset($_POST["submit"])) {
 
     $result = $conn->query($sql);
 
-    header("location:../index.php");
+    header("location:section3.php?status=success");
 }
 ?>
 
