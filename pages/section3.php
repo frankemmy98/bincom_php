@@ -16,11 +16,13 @@ if (isset($_POST["submit"])) {
     $sql = "INSERT INTO announced_pu_results (`polling_unit_uniqueid`, `party_abbreviation`, `party_score`, `entered_by_user`, `date_entered`, `user_ip_address`) VALUES ('$pu_id', '$pty_abbr', '$pty_scr', '$entd_by_u', '$dt_entd', '$u_ip_addr')";
 
     $result = $conn->query($sql);
+
+    header("location:../index.php");
 }
 ?>
 
 <section>
-    <form action="" method="POST" autocomplete="off" id="add_pu_result">
+    <form action="section3.php" method="POST" id="add_pu_result">
         <h2>Fill in New PU Details</h2>
         <div class="pu_form--input">
             <label for="">pu_uniqueid:</label>
