@@ -85,7 +85,7 @@ include('../inc/header.php');
             INNER JOIN lga l ON l.lga_id = p.lga_id WHERE l.lga_name = '$k'";
                 $result = $conn->query($sql);
             }
-            // The Table to store the results
+            // The Table to display the total votes result.
             ?>
             <h3 class="total_votes">
                 Total votes:

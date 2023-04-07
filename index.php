@@ -10,6 +10,7 @@ include(ROOT_PATH . 'inc/header.php'); ?>
     global $conn;
     $sql = "SELECT DISTINCT polling_unit_name FROM polling_unit where polling_unit_id > 0";
     $result = $conn->query($sql);
+    // The Select form to display the results of each LGA
     ?>
     <form method="POST" action="index.php" class="pu_select">
         Select Polling Unit:
@@ -35,7 +36,7 @@ include(ROOT_PATH . 'inc/header.php'); ?>
         INNER JOIN polling_unit p ON p.uniqueid = r.polling_unit_uniqueid WHERE p.polling_unit_name ='$k'";
         $result = $conn->query($sql);
     }
-    // The Table to store the results
+    // The Table to display the results
     ?>
     <table>
         <thead>
